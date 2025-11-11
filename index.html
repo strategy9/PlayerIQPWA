@@ -44,11 +44,11 @@
             border-bottom: 1px solid var(--gold);
         }
 
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+            nav .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
 
         .logo {
             font-size: 24px;
@@ -63,9 +63,9 @@
             transition: color 0.3s;
         }
 
-        .nav-links a:hover {
-            color: var(--gold);
-        }
+            .nav-links a:hover {
+                color: var(--gold);
+            }
 
         /* Hero Section */
         .hero {
@@ -76,20 +76,27 @@
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            animation: pulse 15s ease-in-out infinite;
-        }
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+                animation: pulse 15s ease-in-out infinite;
+            }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.3; }
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.3;
+            }
         }
 
         .hero h1 {
@@ -122,10 +129,10 @@
             z-index: 1;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
-        }
+            .cta-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            }
 
         /* Problem Section */
         .problem {
@@ -133,12 +140,12 @@
             background: var(--light-black);
         }
 
-        .problem h2 {
-            text-align: center;
-            font-size: 42px;
-            margin-bottom: 60px;
-            color: var(--gold);
-        }
+            .problem h2 {
+                text-align: center;
+                font-size: 42px;
+                margin-bottom: 60px;
+                color: var(--gold);
+            }
 
         .problem-grid {
             display: grid;
@@ -155,21 +162,21 @@
             transition: transform 0.3s, border-color 0.3s;
         }
 
-        .problem-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold);
-        }
+            .problem-card:hover {
+                transform: translateY(-5px);
+                border-color: var(--gold);
+            }
 
-        .problem-card h3 {
-            color: var(--gold);
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+            .problem-card h3 {
+                color: var(--gold);
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
 
-        .problem-card p {
-            color: var(--gray);
-            line-height: 1.8;
-        }
+            .problem-card p {
+                color: var(--gray);
+                line-height: 1.8;
+            }
 
         /* Solution Section */
         .solution {
@@ -177,21 +184,90 @@
             background: var(--black);
         }
 
-        .solution h2 {
-            text-align: center;
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: var(--gold);
+            .solution h2 {
+                text-align: center;
+                font-size: 42px;
+                margin-bottom: 20px;
+                color: var(--gold);
+            }
+
+            .solution .intro {
+                text-align: center;
+                font-size: 20px;
+                color: var(--gray);
+                margin-bottom: 60px;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 80px 0;
+            background: var(--light-black);
         }
 
-        .solution .intro {
+            .screenshots h2 {
+                text-align: center;
+                font-size: 42px;
+                margin-bottom: 20px;
+                color: var(--gold);
+            }
+
+            .screenshots .subtitle {
+                text-align: center;
+                font-size: 20px;
+                color: var(--gray);
+                margin-bottom: 60px;
+            }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .screenshot-card {
             text-align: center;
-            font-size: 20px;
+        }
+
+        .screenshot-wrapper {
+            background: var(--black);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+            .screenshot-wrapper:hover {
+                border-color: var(--gold);
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+            }
+
+            .screenshot-wrapper img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+                border-radius: 10px;
+                display: block;
+                background: linear-gradient(135deg, var(--light-black) 0%, var(--black) 100%);
+            }
+
+        .screenshot-card h3 {
+            color: var(--gold);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .screenshot-card p {
             color: var(--gray);
-            margin-bottom: 60px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         /* Features Grid */
@@ -210,11 +286,11 @@
             transition: all 0.3s;
         }
 
-        .feature-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
-        }
+            .feature-card:hover {
+                border-color: var(--gold);
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+            }
 
         .feature-icon {
             font-size: 48px;
@@ -238,20 +314,20 @@
             margin-top: 20px;
         }
 
-        .feature-card ul li {
-            color: var(--gray);
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
+            .feature-card ul li {
+                color: var(--gray);
+                padding: 8px 0;
+                padding-left: 25px;
+                position: relative;
+            }
 
-        .feature-card ul li::before {
-            content: '✓';
-            color: var(--gold);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
+                .feature-card ul li::before {
+                    content: '✓';
+                    color: var(--gold);
+                    position: absolute;
+                    left: 0;
+                    font-weight: bold;
+                }
 
         /* PWA Benefits */
         .pwa-benefits {
@@ -259,19 +335,19 @@
             background: var(--light-black);
         }
 
-        .pwa-benefits h2 {
-            text-align: center;
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
+            .pwa-benefits h2 {
+                text-align: center;
+                font-size: 42px;
+                margin-bottom: 20px;
+                color: var(--gold);
+            }
 
-        .pwa-benefits .subtitle {
-            text-align: center;
-            font-size: 20px;
-            color: var(--gray);
-            margin-bottom: 60px;
-        }
+            .pwa-benefits .subtitle {
+                text-align: center;
+                font-size: 20px;
+                color: var(--gray);
+                margin-bottom: 60px;
+            }
 
         .benefits-grid {
             display: grid;
@@ -288,10 +364,10 @@
             transition: all 0.3s;
         }
 
-        .benefit-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-        }
+            .benefit-card:hover {
+                border-color: var(--gold);
+                transform: translateY(-5px);
+            }
 
         .benefit-icon {
             font-size: 40px;
@@ -315,12 +391,12 @@
             background: var(--black);
         }
 
-        .why-playeriq h2 {
-            text-align: center;
-            font-size: 42px;
-            margin-bottom: 60px;
-            color: var(--gold);
-        }
+            .why-playeriq h2 {
+                text-align: center;
+                font-size: 42px;
+                margin-bottom: 60px;
+                color: var(--gold);
+            }
 
         .why-grid {
             display: grid;
@@ -335,16 +411,16 @@
             border-left: 4px solid var(--gold);
         }
 
-        .why-card h3 {
-            color: var(--gold);
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+            .why-card h3 {
+                color: var(--gold);
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
 
-        .why-card p {
-            color: var(--gray);
-            line-height: 1.8;
-        }
+            .why-card p {
+                color: var(--gray);
+                line-height: 1.8;
+            }
 
         .stat {
             font-size: 36px;
@@ -361,19 +437,19 @@
             text-align: center;
         }
 
-        .flexibility h2 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
+            .flexibility h2 {
+                font-size: 42px;
+                margin-bottom: 20px;
+                color: var(--gold);
+            }
 
-        .flexibility p {
-            font-size: 20px;
-            color: var(--gray);
-            max-width: 800px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
-        }
+            .flexibility p {
+                font-size: 20px;
+                color: var(--gray);
+                max-width: 800px;
+                margin: 0 auto 40px;
+                line-height: 1.8;
+            }
 
         .examples {
             display: flex;
@@ -399,17 +475,17 @@
             text-align: center;
         }
 
-        .cta-section h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
+            .cta-section h2 {
+                font-size: 48px;
+                margin-bottom: 20px;
+                color: var(--gold);
+            }
 
-        .cta-section p {
-            font-size: 22px;
-            color: var(--gray);
-            margin-bottom: 40px;
-        }
+            .cta-section p {
+                font-size: 22px;
+                color: var(--gray);
+                margin-bottom: 40px;
+            }
 
         /* Footer */
         footer {
@@ -419,10 +495,10 @@
             border-top: 1px solid rgba(212, 175, 55, 0.3);
         }
 
-        footer p {
-            color: var(--gray);
-            margin-bottom: 10px;
-        }
+            footer p {
+                color: var(--gray);
+                margin-bottom: 10px;
+            }
 
         .footer-links a {
             color: var(--gold);
@@ -430,9 +506,9 @@
             margin: 0 15px;
         }
 
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
+            .footer-links a:hover {
+                text-decoration: underline;
+            }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -451,8 +527,13 @@
             .features-grid,
             .benefits-grid,
             .why-grid,
-            .problem-grid {
+            .problem-grid,
+            .screenshots-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .screenshot-wrapper img {
+                height: 500px;
             }
         }
     </style>
@@ -506,7 +587,7 @@
         <div class="container">
             <h2>Introducing PlayerIQ PWA</h2>
             <p class="intro">A modern Progressive Web App that delivers an app-like experience without the hassle. Works instantly on any device, updates automatically, and keeps your guests engaged from anywhere on your property.</p>
-            
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
@@ -589,12 +670,54 @@
         </div>
     </section>
 
+    <!-- Screenshots Showcase -->
+    <section class="screenshots">
+        <div class="container">
+            <h2>See It In Action</h2>
+            <p class="subtitle">Real screenshots from PlayerIQ PWA</p>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-wrapper">
+                        <img src="WaitList.png" alt="Queue Management Screen" />
+                    </div>
+                    <h3>Smart Queue Management</h3>
+                    <p>Guests join queues and get real-time updates on their position</p>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-wrapper">
+                        <img src="images/Contests.png" alt="Contest Entry Screen" />
+                    </div>
+                    <h3>Interactive Contests</h3>
+                    <p>Scan QR codes or enter PINs for instant contest participation</p>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-wrapper">
+                        <img src="images/Inbox.png" alt="Push Notifications" />
+                    </div>
+                    <h3>Push Notifications</h3>
+                    <p>Direct communication to guests' phones with rich media</p>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-wrapper">
+                        <img src="images/Home.png" alt="Patron Dashboard" />
+                    </div>
+                    <h3>Personalized Dashboard</h3>
+                    <p>Guests manage their account, view history, and access features</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PWA Benefits -->
     <section class="pwa-benefits" id="benefits">
         <div class="container">
             <h2>Why Progressive Web App?</h2>
             <p class="subtitle">All the benefits of a native app, none of the hassle</p>
-            
+
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">🌐</div>
@@ -633,7 +756,7 @@
                 </div>
 
                 <div class="benefit-card">
-                     <div class="benefit-icon">💎</div>
+                    <div class="benefit-icon">💎</div>
                     <h3>Track Your Rewards</h3>
                     <p>View your comp points, tier benefits, and exclusive offers all in one convenient place.</p>
                 </div>
@@ -643,7 +766,7 @@
                     <h3>Personalized Offers</h3>
                     <p>Receive exclusive deals and promotions tailored just for you. Never miss a special event!</p>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -652,7 +775,7 @@
     <section class="why-playeriq" id="why">
         <div class="container">
             <h2>Why PlayerIQ?</h2>
-            
+
             <div class="why-grid">
                 <div class="why-card">
                     <span class="stat">25+</span>
@@ -698,7 +821,7 @@
         <div class="container">
             <h2>Built for Your Unique Needs</h2>
             <p>Every casino is different. PlayerIQ PWA is designed to adapt to your specific requirements. Need a feature we don't have? We'll build it for you.</p>
-            
+
             <div class="examples">
                 <span class="example-tag">Table Reservations</span>
                 <span class="example-tag">Event Ticketing</span>
@@ -713,7 +836,7 @@
                 <span class="example-tag">Special Offers</span>
                 <span class="example-tag">VIP Services</span>
             </div>
-            
+
             <p style="margin-top: 40px; font-size: 18px;">If you can dream it, we can build it.</p>
         </div>
     </section>
@@ -724,9 +847,9 @@
             <h2>Ready to Transform Your Guest Experience?</h2>
             <p>Available in your next PlayerIQ upgrade. Contact us today to get started.</p>
             <a href="mailto:sales@strategy9.com?subject=PlayerIQ PWA Inquiry" class="cta-button">Contact Us Now</a>
-            
+
             <p style="margin-top: 40px; font-size: 16px; color: var(--gray);">
-                Call us: <a href="tel:8005551234" style="color: var(--gold); text-decoration: none;">1-800-555-1234</a> | 
+                Call us: <a href="tel:8005551234" style="color: var(--gold); text-decoration: none;">1-800-555-1234</a> |
                 Email: <a href="mailto:sales@strategy9.com" style="color: var(--gold); text-decoration: none;">sales@strategy9.com</a>
             </p>
         </div>
