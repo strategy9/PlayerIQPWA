@@ -52,3 +52,11 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+/.vs/PlayerIQPWA/config
+/.vs/PlayerIQPWA/CopilotIndices/17.13.449.12402
+/.vs/PlayerIQPWA/FileContentIndex
+/.vs/PlayerIQPWA/v17/.wsuo
+/.vs/PlayerIQPWA/v17/DocumentLayout.backup.json
+/.vs/PlayerIQPWA/v17/DocumentLayout.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
