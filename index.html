@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-41DYKJDSKP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-41DYKJDSKP');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayerIQ PWA - Transform Your Guest Experience</title>
@@ -79,8 +70,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--black) 0%, var(--light-black) 100%);
-            padding: 180px 0 100px;
-            text-align: center;
+            padding: 140px 0 80px;
             position: relative;
             overflow: hidden;
         }
@@ -108,21 +98,43 @@
             }
         }
 
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
         .hero h1 {
             font-size: 56px;
             margin-bottom: 20px;
             color: var(--gold);
-            position: relative;
-            z-index: 1;
         }
 
         .hero .subtitle {
             font-size: 24px;
             margin-bottom: 40px;
             color: var(--gray);
-            position: relative;
-            z-index: 1;
         }
+
+        .hero-image {
+            position: relative;
+        }
+
+            .hero-image img {
+                width: 100%;
+                height: auto;
+                max-width: 600px;
+                margin-left: auto;
+                display: block;
+                filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
+            }
 
         .cta-button {
             display: inline-block;
@@ -673,12 +685,30 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
             .hero h1 {
                 font-size: 36px;
             }
 
             .hero .subtitle {
                 font-size: 18px;
+            }
+
+            .hero-image img {
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .nav-links {
@@ -729,9 +759,16 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Transform Your Guest Experience</h1>
-            <p class="subtitle">The mobile-first casino engagement platform that keeps guests connected, entertained, and coming back</p>
-            <a href="#contact" class="cta-button">Get Started Today</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transform Your Guest Experience</h1>
+                    <p class="subtitle">The mobile-first casino engagement platform that keeps guests connected, entertained, and coming back</p>
+                    <a href="#contact" class="cta-button">Get Started Today</a>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-phones.png" alt="PlayerIQ PWA on mobile devices" />
+                </div>
+            </div>
         </div>
     </section>
 
